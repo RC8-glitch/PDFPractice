@@ -1,9 +1,8 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="GetInvoiceNumber" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_PDFOutput" Type="InArgument(x:String)" />
     <x:Property Name="out_InvoiceNumberMatch" Type="OutArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1199,820</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1196,820</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -44,6 +43,7 @@
       <x:String>System.Net.Mail</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -137,7 +137,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Matches BuilderPattern="Invoice No.\s\d{6}" DisplayName="Find Matching Pattern for invoice number" FirstMatch="[out_InvoiceNumberMatch]" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="Matches_3" Input="[in_PDFOutput]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;Invoice No.\\s\\d{6}&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="Invoice No.\s\d{6}" RegexOption="IgnoreCase, Compiled" />
+    <ui:Matches BuilderPattern="Invoice No.\s\d{6}" DisplayName="Find Matching Pattern for invoice number" FirstMatch="[out_InvoiceNumberMatch]" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="Matches_3" Input="[PDFOutput]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;Invoice No.\\s\\d{6}&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="Invoice No.\s\d{6}" RegexOption="IgnoreCase, Compiled" />
     <ui:TextToLeftRight TextToLeft="{x:Null}" DisplayName="Text to Left/Right" FullText="[out_InvoiceNumberMatch]" sap:VirtualizedContainerService.HintSize="354,295" sap2010:WorkflowViewState.IdRef="TextToLeftRight_1" Separator="Invoice No. " SeparatorKey="Custom" TextToRight="[out_InvoiceNumberMatch]" />
   </Sequence>
 </Activity>

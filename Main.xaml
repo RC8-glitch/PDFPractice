@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1196,2336" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1196,2718" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -136,7 +136,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="512,2271" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="512,2653" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="FolderPath" />
       <Variable x:TypeArguments="sd2:DataTable" Name="dt_DataTable" />
@@ -155,8 +155,14 @@
         <InArgument x:TypeArguments="x:String">Data\Input</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:BuildDataTable DataTable="[dt_DataTable]" DisplayName="Build dt_DataTable" sap:VirtualizedContainerService.HintSize="450,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020__x0023_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Vendor&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Client&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_Date&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_Total&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-    <ui:ForEachFileX DisplayName="For Each pdf File in Folder" Filter="*.pdf" Folder="[FolderPath]" sap:VirtualizedContainerService.HintSize="450,1782" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+    <ui:BuildDataTable sap2010:Annotation.AnnotationText="Build datatable to hold info from pdf files in the Input folder" DataTable="[dt_DataTable]" DisplayName="Build dt_DataTable" sap:VirtualizedContainerService.HintSize="450,134" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020__x0023_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Vendor&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Client&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_Date&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_Total&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:BuildDataTable>
+    <ui:ForEachFileX DisplayName="For Each pdf File in Folder" Filter="*.pdf" Folder="[FolderPath]" sap:VirtualizedContainerService.HintSize="450,2091" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
       <ui:ForEachFileX.Body>
         <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
           <ActivityAction.Argument1>
@@ -165,7 +171,7 @@
           <ActivityAction.Argument2>
             <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
           </ActivityAction.Argument2>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1492" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1801" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="InvoiceDate" />
               <Variable x:TypeArguments="x:String" Name="InvoiceTotal" />
@@ -181,7 +187,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ReadPDFWithOCR DegreeOfParallelism="-1" DisplayName="Read PDF With OCR" FileName="[pdfInFolder.FullName]" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="ReadPDFWithOCR_2" ImageDpi="150" Range="All" Text="[GlobalVariablesNamespace.GlobalVariables.PDFOutput]">
+            <ui:ReadPDFWithOCR sap2010:Annotation.AnnotationText="Read pdf file and store it in global variable PDFOutput" DegreeOfParallelism="-1" DisplayName="Read PDF With OCR" FileName="[pdfInFolder.FullName]" sap:VirtualizedContainerService.HintSize="354,231" sap2010:WorkflowViewState.IdRef="ReadPDFWithOCR_2" ImageDpi="150" Range="All" Text="[GlobalVariablesNamespace.GlobalVariables.PDFOutput]">
               <ui:ReadPDFWithOCR.OCREngine>
                 <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
                   <ActivityFunc.Argument>
@@ -190,35 +196,63 @@
                   <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Language="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="GoogleOCR_1" Image="[Image]" Invert="False" NoopExecution="False" />
                 </ActivityFunc>
               </ui:ReadPDFWithOCR.OCREngine>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:ReadPDFWithOCR>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetInvoiceDate - Invoke Workflow File (GetInvoiceDate.xaml)" sap:VirtualizedContainerService.HintSize="354,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" Level="Info" LogEntry="[UiPath.Core.Activities.LogEntryType.OnlyInvocation]" LogExit="[UiPath.Core.Activities.LogExitType.WithArguments]" UnSafe="False" WorkflowFileName="GetInvoiceDate.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="This workflow splits PDFOutput at &quot;Date:&quot; and uses regex to get the date from the pdf file." DisplayName="GetInvoiceDate - Invoke Workflow File (GetInvoiceDate.xaml)" sap:VirtualizedContainerService.HintSize="354,246" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" Level="Info" LogEntry="[UiPath.Core.Activities.LogEntryType.OnlyInvocation]" LogExit="[UiPath.Core.Activities.LogExitType.WithArguments]" UnSafe="False" WorkflowFileName="GetInvoiceDate.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <OutArgument x:TypeArguments="x:String" x:Key="out_InvoiceDate">[InvoiceDate]</OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeWorkflowFile>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetInvoiceNumber - Invoke Workflow File (GetInvoiceNumber.xaml)" sap:VirtualizedContainerService.HintSize="354,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" Level="Info" LogEntry="[UiPath.Core.Activities.LogEntryType.OnlyInvocation]" LogExit="[UiPath.Core.Activities.LogExitType.WithArguments]" UnSafe="False" WorkflowFileName="GetInvoiceNumber.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="This workflow takes PDFOutput and uses regex to find and return the invoice number in out_InvoiceNumberMatch." DisplayName="GetInvoiceNumber - Invoke Workflow File (GetInvoiceNumber.xaml)" sap:VirtualizedContainerService.HintSize="354,261" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" Level="Info" LogEntry="[UiPath.Core.Activities.LogEntryType.OnlyInvocation]" LogExit="[UiPath.Core.Activities.LogExitType.WithArguments]" UnSafe="False" WorkflowFileName="GetInvoiceNumber.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="in_PDFOutput">[GlobalVariablesNamespace.GlobalVariables.PDFOutput]</InArgument>
                 <OutArgument x:TypeArguments="x:String" x:Key="out_InvoiceNumberMatch">[InvoiceNumberMatch]</OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeWorkflowFile>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetVendor - Invoke Workflow File (GetVendor.xaml)" sap:VirtualizedContainerService.HintSize="354,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" Level="Info" LogEntry="[UiPath.Core.Activities.LogEntryType.OnlyInvocation]" LogExit="[UiPath.Core.Activities.LogExitType.OnlySuccessfulReturn]" UnSafe="False" WorkflowFileName="GetVendor.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Takes PDFOutput and returns the vendor name in out_VendorMatch." DisplayName="GetVendor - Invoke Workflow File (GetVendor.xaml)" sap:VirtualizedContainerService.HintSize="354,246" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" Level="Info" LogEntry="[UiPath.Core.Activities.LogEntryType.OnlyInvocation]" LogExit="[UiPath.Core.Activities.LogExitType.OnlySuccessfulReturn]" UnSafe="False" WorkflowFileName="GetVendor.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <OutArgument x:TypeArguments="x:String" x:Key="out_VendorMatch">[VendorMatch]</OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeWorkflowFile>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetTotal - Invoke Workflow File (GetTotal.xaml)" sap:VirtualizedContainerService.HintSize="354,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" Level="Info" LogEntry="[UiPath.Core.Activities.LogEntryType.OnlyInvocation]" LogExit="[UiPath.Core.Activities.LogExitType.OnlySuccessfulReturn]" UnSafe="False" WorkflowFileName="GetTotal.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Splits PDFOutput at &quot;Total:&quot; and returns the invoice total in out_InvoiceTotal." DisplayName="GetTotal - Invoke Workflow File (GetTotal.xaml)" sap:VirtualizedContainerService.HintSize="354,246" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" Level="Info" LogEntry="[UiPath.Core.Activities.LogEntryType.OnlyInvocation]" LogExit="[UiPath.Core.Activities.LogExitType.OnlySuccessfulReturn]" UnSafe="False" WorkflowFileName="GetTotal.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <OutArgument x:TypeArguments="x:String" x:Key="out_InvoiceTotal">[InvoiceTotal]</OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeWorkflowFile>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetClientName - Invoke Workflow File (GetClientName.xaml)" sap:VirtualizedContainerService.HintSize="354,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" Level="Info" LogEntry="[UiPath.Core.Activities.LogEntryType.OnlyInvocation]" LogExit="[UiPath.Core.Activities.LogExitType.OnlySuccessfulReturn]" UnSafe="False" WorkflowFileName="GetClientName.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Splits PDFOutput at &quot;Client:&quot; and returns the client name in out_ClientName." DisplayName="GetClientName - Invoke Workflow File (GetClientName.xaml)" sap:VirtualizedContainerService.HintSize="354,246" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" Level="Info" LogEntry="[UiPath.Core.Activities.LogEntryType.OnlyInvocation]" LogExit="[UiPath.Core.Activities.LogExitType.OnlySuccessfulReturn]" UnSafe="False" WorkflowFileName="GetClientName.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="in_PDFOutput">[GlobalVariablesNamespace.GlobalVariables.PDFOutput]</InArgument>
                 <OutArgument x:TypeArguments="x:String" x:Key="out_ClientName">[ClientName]</OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeWorkflowFile>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AddDataRowFromPDFText - Invoke Workflow File (AddDataRowFromPDFText.xaml)" sap:VirtualizedContainerService.HintSize="354,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" Level="Info" LogEntry="[UiPath.Core.Activities.LogEntryType.OnlyInvocation]" LogExit="[UiPath.Core.Activities.LogExitType.OnlySuccessfulReturn]" UnSafe="False" WorkflowFileName="AddDataRowFromPDFText.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Returns dt_DataTable filled with the invoice values from previous workflows." DisplayName="AddDataRowFromPDFText - Invoke Workflow File (AddDataRowFromPDFText.xaml)" sap:VirtualizedContainerService.HintSize="354,237" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" Level="Info" LogEntry="[UiPath.Core.Activities.LogEntryType.OnlyInvocation]" LogExit="[UiPath.Core.Activities.LogExitType.OnlySuccessfulReturn]" UnSafe="False" WorkflowFileName="AddDataRowFromPDFText.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="in_InvoiceDate">[InvoiceDate]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="in_InvoiceTotal">[InvoiceTotal]</InArgument>
@@ -227,16 +261,26 @@
                 <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
                 <InOutArgument x:TypeArguments="sd2:DataTable" x:Key="io_dt_DataTable">[dt_DataTable]</InOutArgument>
               </ui:InvokeWorkflowFile.Arguments>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeWorkflowFile>
           </Sequence>
         </ActivityAction>
       </ui:ForEachFileX.Body>
     </ui:ForEachFileX>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="WritedtDataTableintoWorkbook - Invoke Workflow File (WritedtDataTableintoWorkbook.xaml)" sap:VirtualizedContainerService.HintSize="450,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" Level="Info" LogEntry="[UiPath.Core.Activities.LogEntryType.OnlyInvocation]" LogExit="[UiPath.Core.Activities.LogExitType.OnlySuccessfulReturn]" UnSafe="False" WorkflowFileName="WritedtDataTableintoWorkbook.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Writes dt_DataTable into spreadsheet in Output folder." DisplayName="WritedtDataTableintoWorkbook - Invoke Workflow File (WritedtDataTableintoWorkbook.xaml)" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" Level="Info" LogEntry="[UiPath.Core.Activities.LogEntryType.OnlyInvocation]" LogExit="[UiPath.Core.Activities.LogExitType.OnlySuccessfulReturn]" UnSafe="False" WorkflowFileName="WritedtDataTableintoWorkbook.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="sd2:DataTable" x:Key="in_dt_DataTable">[dt_DataTable]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_WorkbookPath">[WorkbookPath]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
   </Sequence>
 </Activity>
