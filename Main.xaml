@@ -171,11 +171,9 @@
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="InvoiceDate" />
               <Variable x:TypeArguments="x:String" Name="InvoiceTotal" />
-              <Variable x:TypeArguments="x:String" Name="DateOutput" />
               <Variable x:TypeArguments="x:String" Name="VendorMatch" />
               <Variable x:TypeArguments="x:String" Name="InvoiceNumberMatch" />
               <Variable x:TypeArguments="x:String" Name="ClientName" />
-              <Variable x:TypeArguments="x:String" Name="TheFileName" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">

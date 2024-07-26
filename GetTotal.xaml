@@ -111,7 +111,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ucat:TrimTextModification DisplayName="Trim text" sap:VirtualizedContainerService.HintSize="334,63" sap2010:WorkflowViewState.IdRef="TrimTextModification_1" />
+            <ucat:TrimTextModification DisplayName="Trim whitespace from InvoiceTotal" sap:VirtualizedContainerService.HintSize="334,63" sap2010:WorkflowViewState.IdRef="TrimTextModification_1" />
           </Sequence>
         </ActivityAction>
       </ui:ModifyText.Body>
